@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: hamzatemp/collection
         with:
           apiKey: https://api.postman.com/collections/38790537-07126bb3-bfa0-4e14-a17e-12003c8b5a80?access_key=PMAT-01JCFPNASYH1PHSJZ4AP4JAKF9
           collection: postman Practice_collection.json
