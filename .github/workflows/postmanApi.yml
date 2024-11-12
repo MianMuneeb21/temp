@@ -12,4 +12,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: collection\Postman-Practice.json
+          apiKey: ${{ secrets.POSTMANAPIKEY }}
+          collection: 38790537-07126bb3-bfa0-4e14-a17e-12003c8b5a80
