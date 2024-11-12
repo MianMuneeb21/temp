@@ -1,16 +1,16 @@
 name: Newman Run
 
 on:
-  push:
+  pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   newman:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
         with:
-          apiKey: https://api.postman.com/collections/38790537-07126bb3-bfa0-4e14-a17e-12003c8b5a80?access_key=PMAT-01JCFPNASYH1PHSJZ4AP4JAKF9
-          collection: postman Practice_collection.json
-          #environment: 5922408-228c7edd-fc15-4f68-9665-a35d7df6945b
+          apiKey: ${{ secrets.POSTMANAPIKEY }}
+          collection: 38790537-07126bb3-bfa0-4e14-a17e-12003c8b5a80
